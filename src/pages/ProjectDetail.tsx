@@ -18,9 +18,9 @@ const ProjectDetail = () => {
           <div className="text-center">
             <h1 className="text-2xl font-bold mb-4">Project not found</h1>
             <Button asChild>
-              <Link to="/projects">
+              <Link to="/">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Projects
+                Back to Home
               </Link>
             </Button>
           </div>
@@ -38,9 +38,9 @@ const ProjectDetail = () => {
         {/* Back Button */}
         <div className="container-custom py-6">
           <Button variant="ghost" asChild>
-            <Link to="/projects">
+            <Link to="/">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Projects
+              Back to Home
             </Link>
           </Button>
         </div>
