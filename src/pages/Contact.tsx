@@ -105,13 +105,13 @@ const Contact = () => {
                 <h2 className="text-2xl font-semibold mb-6">Connect</h2>
                 <div className="space-y-6">
                   <a
-                    href="mailto:daria@example.com"
+                    href="mailto:odrshrv@gmail.com"
                     className="flex items-start gap-4 p-4 rounded-lg border border-border hover:border-accent hover:bg-accent/5 transition-all group"
                   >
                     <Mail className="h-6 w-6 text-accent mt-1 shrink-0" />
                     <div>
                       <div className="font-semibold mb-1 group-hover:text-accent transition-colors">Email</div>
-                      <div className="text-muted-foreground">daria@example.com</div>
+                      <div className="text-muted-foreground">odrshrv@gmail.com</div>
                     </div>
                   </a>
 

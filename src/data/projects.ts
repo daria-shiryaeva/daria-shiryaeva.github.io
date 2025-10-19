@@ -9,8 +9,6 @@ export interface Project {
   status: string;
   overview: string;
   contributions: string;
-  sustainability: string;
-  outcomes: string;
   heroImage: string;
   heroAlt: string;
   gallery: { src: string; alt: string }[];
@@ -31,15 +29,13 @@ export const projects: Project[] = [
     status: 'Industrial Placement',
     overview: 'I helped develop ten route-wide design principles to guide assets from viaducts to headhouses across the Oxford–Cambridge route.',
     contributions: 'I conducted extensive site analysis of major assets along the route, evaluating their constraints, opportunities, and context. I compiled findings into a cohesive report and coordinated the main project document, developing its structure and integrating feedback from directors, clients, stakeholders, and senior architects. I also updated accompanying sketches and technical drawings to align with the latest design requirements.',
-    sustainability: 'The principles embed environmental responsibility and carbon consciousness at their core, ensuring every asset type considers lifecycle impact, climate resilience, and biodiversity connectivity. We prioritized passive-first strategies and material clarity across the entire route.',
-    outcomes: 'The ten principles now form the foundation of East West Rail design approach, ensuring consistency and quality across hundreds of assets. The framework supports multi-stakeholder decision-making and sets a new benchmark for large-scale infrastructure design in the UK.',
     heroImage: '/src/assets/projects/ewr-map.jpg',
     heroAlt: 'Route-wide principles diagram for East West Rail showing asset typologies and constraints',
     gallery: [
       { src: '/src/assets/projects/ewr-map.jpg', alt: 'Illustrative mapping of assets along the EWR route' },
       { src: '/src/assets/projects/ewr-overbridge.jpg', alt: 'Illustrative depiction of overbridge key interfaces and main structural components' },
     ],
-    tags: ['Infrastructure', 'Principles-Led', 'Sustainability', 'Stakeholder Engagement'],
+    tags: [],
     featured: true,
     impact: 'Principles-led framework for major UK infrastructure',
   },
@@ -54,14 +50,12 @@ export const projects: Project[] = [
     status: 'Individual Project',
     overview: 'A community-centred sports and wellbeing hub with pools, flexible sports hall and market space, studio and therapy rooms, and generous glazing that connects activity to the street.',
     contributions: 'I designed the full scheme from concept to detail, integrating a complex mixed-use programme that includes adult and children pool depths, a sports hall that converts to market space, café, community rooms, yoga and pilates studios, and therapy spaces. I developed a clear hierarchy of large volumes and cellular spaces, ensuring intuitive circulation and strong connections to the street.',
-    sustainability: 'The building employs north lights and stack ventilation via roof lights, supplemented by photovoltaics and ground-source heat pumps for the pool. Shading includes brise-soleil and vertical fins. Green roof terraces support biodiversity corridors, and planting is integrated throughout to enhance air quality and user wellbeing.',
-    outcomes: 'The project demonstrates how community sports facilities can serve multiple functions while achieving rigorous environmental performance. The design prioritizes accessibility, intergenerational use, and long-term health outcomes.',
     heroImage: '/src/assets/projects/healthier-futures-plan.jpg',
     heroAlt: 'Community sports centre plan with swimming pool, sports hall, and cafe',
     gallery: [
       { src: '/src/assets/projects/healthier-futures-plan.jpg', alt: 'Ground floor plan showing pool, sports hall, and community spaces' },
     ],
-    tags: ['Community', 'Wellbeing', 'Passive Design', 'Mixed-Use'],
+    tags: [],
     featured: true,
     impact: 'Community wellbeing hub with pool and flexible halls',
   },
@@ -76,14 +70,12 @@ export const projects: Project[] = [
     status: 'TED Project',
     overview: 'An education and innovation campus showcasing visible labs and greenhouse, winter gardens, algae facade panels, and biodiversity-rich courtyards.',
     contributions: 'I designed a higher education institute and innovation hub with visible research labs and greenhouse, winter gardens for year-round learning, and public realm upgrades. The scheme includes algae facade panels as both a renewable energy source and a learning device, alongside thermal labyrinth, geothermal systems, and solar arrays.',
-    sustainability: 'The project foregrounds climate science through its architectural expression: algae panels generate energy while demonstrating biological processes, thermal labyrinth and geothermal systems provide passive heating and cooling, and biodiverse courtyards support research and urban ecology. The design makes environmental systems visible and educational.',
-    outcomes: 'The institute positions Swindon as a hub for climate research and innovation, integrating higher education with public engagement. The building itself becomes a teaching tool, demonstrating sustainable technologies in action and fostering collaboration between researchers, students, and the community.',
     heroImage: '/src/assets/projects/ewr-map.jpg',
     heroAlt: 'Institute section with winter gardens, visible labs, and greenhouse on roof',
     gallery: [
       { src: '/src/assets/projects/ewr-map.jpg', alt: 'Building section showing winter gardens, learning labs, and rooftop greenhouse' },
     ],
-    tags: ['Education', 'Innovation', 'Climate Science', 'Algae Facade'],
+    tags: [],
     featured: true,
     impact: 'HE and innovation hub with visible labs and greenhouse',
   },
@@ -98,14 +90,12 @@ export const projects: Project[] = [
     status: 'Industrial Placement',
     overview: 'I produced strategy diagrams, rendered masterplan for the Design and Access Statement, and clear sections and levels communication for public consultation on the Octagon Theatre redevelopment.',
     contributions: 'I created a suite of public consultation visuals, including strategy diagrams that clarified design intent, a fully rendered masterplan for the DAS, and sectional and level-by-level drawings that communicated complex spatial relationships to non-specialist audiences.',
-    sustainability: 'The project prioritized heritage retention, sustainable refurbishment, and community access, ensuring the theatre remains a cultural anchor for Bolton while reducing embodied carbon through adaptive reuse.',
-    outcomes: 'The visuals supported successful public engagement, helping stakeholders and the community understand the design proposals and their benefits. The project advanced to Stage 5 with strong community support.',
     heroImage: '/src/assets/projects/octagon-theatre.jpg',
     heroAlt: 'Rendered masterplan for Octagon Theatre showing public realm and theatre entrance',
     gallery: [
       { src: '/src/assets/projects/octagon-theatre.jpg', alt: 'Masterplan visualisation for public consultation' },
     ],
-    tags: ['Culture', 'Heritage', 'Public Consultation', 'Visualisation'],
+    tags: [],
   },
   {
     id: '5',
@@ -118,12 +108,10 @@ export const projects: Project[] = [
     status: 'Industrial Placement',
     overview: 'I tested design options in Rhino, updated drawings in MicroStation, produced V-Ray and Enscape renders, and created a physical abutment model using laser cutting and 3D printing.',
     contributions: 'I conducted Rhino-based option testing to refine the overbridge design, updated technical drawings in MicroStation, and produced high-quality visualisations using V-Ray and Photoshop. I also fabricated a detailed physical model of the abutment using laser cutting and 3D printing, which was used in client workshops.',
-    sustainability: 'The design prioritized material efficiency, climate resilience, and visual integration with the surrounding urban context, ensuring the overbridge supports long-term performance while minimizing environmental impact.',
-    outcomes: 'The design options and visualisations informed client decision-making, and the physical model facilitated productive workshops with stakeholders. The project demonstrated the value of mixed-media communication in large-scale infrastructure design.',
     heroImage: '/src/assets/projects/ewr-overbridge.jpg',
     heroAlt: 'HS2 Aston Church Overbridge visualisation showing structural components',
     gallery: [],
-    tags: ['Infrastructure', 'HS2', 'Rhino', 'Physical Modelling'],
+    tags: [],
   },
   {
     id: '6',
@@ -136,12 +124,10 @@ export const projects: Project[] = [
     status: 'Academic Project',
     overview: 'A comprehensive public realm strategy focusing on pedestrian connectivity, green infrastructure, and community activation along a major transport corridor.',
     contributions: 'I developed urban design principles, pedestrian movement analysis, and public space activation strategies. The work included detailed mapping of existing conditions, stakeholder engagement frameworks, and phased implementation plans.',
-    sustainability: 'The strategy prioritized sustainable urban drainage systems (SUDS), urban greening corridors, and low-carbon materials. Heat island mitigation and biodiversity enhancement were core considerations throughout.',
-    outcomes: 'The framework provided clear guidance for future development along the corridor, balancing transport infrastructure needs with quality public space and environmental performance.',
     heroImage: '/src/assets/projects/ewr-map.jpg',
     heroAlt: 'Urban public realm strategy showing green corridors and pedestrian connections',
     gallery: [],
-    tags: ['Infrastructure', 'Urban Design', 'SUDS', 'Green Infrastructure'],
+    tags: [],
   },
   {
     id: '7',
@@ -154,12 +140,10 @@ export const projects: Project[] = [
     status: 'Academic Project',
     overview: 'A flexible learning centre serving multiple age groups, with adaptable classrooms, maker spaces, and community rooms designed around a central courtyard.',
     contributions: 'I designed a modular learning environment that supports various teaching methods and community activities. The scheme prioritizes natural light, acoustic separation, and flexible furniture systems.',
-    sustainability: 'Cross-ventilation, daylight optimization, and thermal mass strategies reduce mechanical systems. Rainwater harvesting and green roofs support biodiversity and reduce surface water runoff.',
-    outcomes: 'The design demonstrates how educational facilities can serve broader community needs while achieving excellent environmental performance through passive strategies.',
     heroImage: '/src/assets/projects/healthier-futures-plan.jpg',
     heroAlt: 'Community learning centre plan showing flexible classrooms around courtyard',
     gallery: [],
-    tags: ['Education', 'Community', 'Passive Design', 'Flexible Space'],
+    tags: [],
   },
   {
     id: '8',
@@ -172,12 +156,10 @@ export const projects: Project[] = [
     status: 'Academic Project',
     overview: 'A detailed study of low-carbon retrofit strategies for Georgian terraces, balancing heritage conservation with energy performance improvements.',
     contributions: 'I conducted fabric analysis, thermal modelling, and developed a toolkit of sympathetic retrofit interventions. The work included material research, building physics analysis, and visual impact assessments.',
-    sustainability: 'The study explored internal wall insulation, secondary glazing, airtightness improvements, and renewable heating systems—all designed to respect heritage significance while dramatically reducing carbon emissions.',
-    outcomes: 'The research provides practical guidance for heritage property owners and demonstrates that significant energy improvements are possible within conservation constraints.',
     heroImage: '/src/assets/projects/octagon-theatre.jpg',
     heroAlt: 'Heritage building section showing retrofit interventions',
     gallery: [],
-    tags: ['Culture', 'Heritage', 'Retrofit', 'Building Physics'],
+    tags: [],
   },
   {
     id: '9',
@@ -190,11 +172,9 @@ export const projects: Project[] = [
     status: 'Academic Project',
     overview: 'A scalable modular housing system designed for rapid deployment, focusing on low embodied carbon, adaptability, and community-oriented site layouts.',
     contributions: 'I developed the modular system, coordinated structural and MEP integration, and tested various site configurations. The work included material selection, junction details, and assembly sequences.',
-    sustainability: 'The design uses cross-laminated timber structure, prefabricated insulated panels, and minimizes site waste. Units are designed for disassembly and future adaptation or relocation.',
-    outcomes: 'The prototype demonstrates how modular construction can deliver high-quality, sustainable homes while maintaining architectural character and community cohesion.',
     heroImage: '/src/assets/projects/ewr-overbridge.jpg',
     heroAlt: 'Modular housing prototype assembly sequence',
     gallery: [],
-    tags: ['Community', 'Modular', 'CLT', 'Low Carbon'],
+    tags: [],
   },
 ];

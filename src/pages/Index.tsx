@@ -8,19 +8,9 @@ import ProjectCard from '@/components/ProjectCard';
 import { projects } from '@/data/projects';
 
 const Index = () => {
-  const [selectedType, setSelectedType] = useState<string | null>(null);
-  const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [showAll, setShowAll] = useState(false);
 
-  const types = Array.from(new Set(projects.map(p => p.type)));
-  const allTags = Array.from(new Set(projects.flatMap(p => p.tags)));
-
-  const filteredProjects = projects.filter(project => {
-    if (selectedType && project.type !== selectedType) return false;
-    if (selectedTag && !project.tags.includes(selectedTag)) return false;
-    return true;
-  });
-
+  const filteredProjects = projects; // No filtering needed.
   const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 6);
 
   return (
@@ -32,10 +22,10 @@ const Index = () => {
         <section className="container-custom py-24 md:py-32">
           <div className="max-w-4xl fade-in">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
-              Architecture, infrastructure, and public realm—designed with people and planet in mind.
+              Architecture, infrastructure, and regeneration.
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-              I'm Daria, a Master's student at the University of Bath, focused on community-centred, low-carbon design.
+              I'm Daria, an architecture Master's student at the University of Bath. I am consistently engaged in various projects and try to make an effort to keep them update to date here.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" variant="outline" asChild>
@@ -57,53 +47,7 @@ const Index = () => {
             </p>
 
             {/* Filters */}
-            <div className="mb-12">
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold mb-3">Type</h3>
-                <div className="flex flex-wrap gap-2">
-                  <Badge
-                    variant={selectedType === null ? 'default' : 'outline'}
-                    className="cursor-pointer"
-                    onClick={() => setSelectedType(null)}
-                  >
-                    All
-                  </Badge>
-                  {types.map(type => (
-                    <Badge
-                      key={type}
-                      variant={selectedType === type ? 'default' : 'outline'}
-                      className="cursor-pointer"
-                      onClick={() => setSelectedType(type)}
-                    >
-                      {type}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-              
-              <div>
-                <h3 className="text-sm font-semibold mb-3">Focus</h3>
-                <div className="flex flex-wrap gap-2">
-                  <Badge
-                    variant={selectedTag === null ? 'default' : 'outline'}
-                    className="cursor-pointer"
-                    onClick={() => setSelectedTag(null)}
-                  >
-                    All
-                  </Badge>
-                  {allTags.map(tag => (
-                    <Badge
-                      key={tag}
-                      variant={selectedTag === tag ? 'default' : 'outline'}
-                      className="cursor-pointer"
-                      onClick={() => setSelectedTag(tag)}
-                    >
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-            </div>
+            {/* Removed filter badge UI for Type and Focus */}
 
             {/* Projects Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

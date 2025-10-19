@@ -47,42 +47,37 @@ const ProjectDetail = () => {
 
         {/* Header */}
         <section className="container-custom pb-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">{project.title}</h1>
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.tags.map(tag => (
-                  <Badge key={tag} variant="secondary">{tag}</Badge>
-                ))}
-              </div>
-            </div>
-            <div className="space-y-4 text-sm">
-              <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
+          <div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">{project.title}</h1>
+            
+            {/* Metadata in horizontal layout */}
+            <div className="flex flex-wrap gap-6 text-sm">
+              <div className="flex items-center gap-2">
+                <MapPin className="h-5 w-5 text-muted-foreground shrink-0" />
                 <div>
-                  <div className="font-semibold mb-1">Location</div>
-                  <div className="text-muted-foreground">{project.location}</div>
+                  <span className="font-semibold">Location</span>
+                  <span className="text-muted-foreground ml-2">{project.location}</span>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <Calendar className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
+              <div className="flex items-center gap-2">
+                <Calendar className="h-5 w-5 text-muted-foreground shrink-0" />
                 <div>
-                  <div className="font-semibold mb-1">Year</div>
-                  <div className="text-muted-foreground">{project.year}</div>
+                  <span className="font-semibold">Year</span>
+                  <span className="text-muted-foreground ml-2">{project.year}</span>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <User className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
+              <div className="flex items-center gap-2">
+                <User className="h-5 w-5 text-muted-foreground shrink-0" />
                 <div>
-                  <div className="font-semibold mb-1">Role</div>
-                  <div className="text-muted-foreground">{project.role}</div>
+                  <span className="font-semibold">Role</span>
+                  <span className="text-muted-foreground ml-2">{project.role}</span>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <FileText className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
+              <div className="flex items-center gap-2">
+                <FileText className="h-5 w-5 text-muted-foreground shrink-0" />
                 <div>
-                  <div className="font-semibold mb-1">Status</div>
-                  <div className="text-muted-foreground">{project.status}</div>
+                  <span className="font-semibold">Status</span>
+                  <span className="text-muted-foreground ml-2">{project.status}</span>
                 </div>
               </div>
             </div>
@@ -113,18 +108,6 @@ const ProjectDetail = () => {
             <div>
               <h2 className="text-2xl font-bold mb-6">My Role & Contributions</h2>
               <p className="text-lg text-foreground leading-relaxed">{project.contributions}</p>
-            </div>
-
-            {/* Sustainability */}
-            <div>
-              <h2 className="text-2xl font-bold mb-6">Sustainability</h2>
-              <p className="text-lg text-foreground leading-relaxed">{project.sustainability}</p>
-            </div>
-
-            {/* Outcomes */}
-            <div>
-              <h2 className="text-2xl font-bold mb-6">Outcomes</h2>
-              <p className="text-lg text-foreground leading-relaxed">{project.outcomes}</p>
             </div>
 
             {/* Gallery */}
