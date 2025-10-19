@@ -1,13 +1,27 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Building2, Users, Sprout } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ProjectCard from '@/components/ProjectCard';
 import { projects } from '@/data/projects';
 
 const Index = () => {
-  const featuredProjects = projects.filter(p => p.featured);
+  const [selectedType, setSelectedType] = useState<string | null>(null);
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const types = Array.from(new Set(projects.map(p => p.type)));
+  const allTags = Array.from(new Set(projects.flatMap(p => p.tags)));
+
+  const filteredProjects = projects.filter(project => {
+    if (selectedType && project.type !== selectedType) return false;
+    if (selectedTag && !project.tags.includes(selectedTag)) return false;
+    return true;
+  });
+
+  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -24,87 +38,98 @@ const Index = () => {
               I'm Daria, a Master's student at the University of Bath, focused on community-centred, low-carbon design.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild>
-                <Link to="/projects">
-                  View Projects
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link to="/about">About Me</Link>
               </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Projects */}
-        <section className="bg-secondary/30 py-20">
-          <div className="container-custom">
-            <h2 className="text-3xl font-bold mb-12">Featured Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Approach */}
-        <section className="container-custom py-20">
-          <h2 className="text-3xl font-bold mb-12 text-center">Approach</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-6">
-                <Users className="h-8 w-8 text-accent" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">People & Place</h3>
-              <p className="text-muted-foreground">
-                Inclusive programmes, intergenerational use, and spaces that strengthen community bonds.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-6">
-                <Sprout className="h-8 w-8 text-accent" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Low-Carbon Logic</h3>
-              <p className="text-muted-foreground">
-                Passive first, material clarity, and lifecycle thinking for resilient, sustainable buildings.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-6">
-                <Building2 className="h-8 w-8 text-accent" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Clarity in Communication</h3>
-              <p className="text-muted-foreground">
-                Diagrams, principles, and coordination that make complex projects clear to all stakeholders.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Practices */}
-        <section className="bg-secondary/30 py-20">
-          <div className="container-custom">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl font-semibold mb-6">Education & Experience</h2>
-              <div className="flex flex-wrap justify-center items-center gap-8">
-                <div className="text-muted-foreground">
-                  <span className="font-semibold text-foreground">University of Bath</span> — Master's, 2026
-                </div>
-                <div className="text-muted-foreground">WW+P Architects</div>
-                <div className="text-muted-foreground">Weston Williamson and Partners</div>
-                <div className="text-muted-foreground">LT Studio</div>
-              </div>
-            </div>
-            <div className="text-center">
-              <p className="text-lg text-muted-foreground mb-6">
-                Open to collaborations and graduate roles in 2026.
-              </p>
-              <Button variant="outline" asChild>
+              <Button size="lg" variant="outline" asChild>
                 <Link to="/contact">Get in Touch</Link>
               </Button>
             </div>
+          </div>
+        </section>
+
+        {/* Projects */}
+        <section className="bg-secondary/30 py-20">
+          <div className="container-custom">
+            <h2 className="text-3xl font-bold mb-12">Projects</h2>
+            <p className="text-xl text-muted-foreground mb-12 max-w-3xl">
+              A selection of work across infrastructure, community facilities, education, and cultural projects—each focused on sustainability, clarity, and people.
+            </p>
+
+            {/* Filters */}
+            <div className="mb-12">
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold mb-3">Type</h3>
+                <div className="flex flex-wrap gap-2">
+                  <Badge
+                    variant={selectedType === null ? 'default' : 'outline'}
+                    className="cursor-pointer"
+                    onClick={() => setSelectedType(null)}
+                  >
+                    All
+                  </Badge>
+                  {types.map(type => (
+                    <Badge
+                      key={type}
+                      variant={selectedType === type ? 'default' : 'outline'}
+                      className="cursor-pointer"
+                      onClick={() => setSelectedType(type)}
+                    >
+                      {type}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-sm font-semibold mb-3">Focus</h3>
+                <div className="flex flex-wrap gap-2">
+                  <Badge
+                    variant={selectedTag === null ? 'default' : 'outline'}
+                    className="cursor-pointer"
+                    onClick={() => setSelectedTag(null)}
+                  >
+                    All
+                  </Badge>
+                  {allTags.map(tag => (
+                    <Badge
+                      key={tag}
+                      variant={selectedTag === tag ? 'default' : 'outline'}
+                      className="cursor-pointer"
+                      onClick={() => setSelectedTag(tag)}
+                    >
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Projects Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {displayedProjects.map(project => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </div>
+
+            {filteredProjects.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-muted-foreground">No projects match your filters.</p>
+              </div>
+            )}
+
+            {/* Show More/Less Button */}
+            {filteredProjects.length > 3 && (
+              <div className="text-center mt-12">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  onClick={() => setShowAll(!showAll)}
+                >
+                  {showAll ? 'Show Less' : `Show All ${filteredProjects.length} Projects`}
+                </Button>
+              </div>
+            )}
           </div>
         </section>
       </main>
