@@ -21,7 +21,7 @@ const Index = () => {
     return true;
   });
 
-  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
+  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 6);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -119,7 +119,7 @@ const Index = () => {
             )}
 
             {/* Show More/Less Button */}
-            {filteredProjects.length > 3 && (
+            {filteredProjects.length > 6 && (
               <div className="text-center mt-12">
                 <Button 
                   variant="outline" 
