@@ -85,7 +85,7 @@ const About = () => {
                 Get a complete overview of my education, experience, and skills.
               </p>
               <Button size="lg" asChild>
-                <a href="/daria-shiryaeva-cv.pdf" download>
+                <a href="/assets/projects/daria-shiryaeva-cv.pdf" download>
                   <FileDown className="mr-2 h-5 w-5" />
                   Download CV
                 </a>

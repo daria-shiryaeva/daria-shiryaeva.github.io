@@ -41,7 +41,7 @@ const Header = () => {
               </Link>
             ))}
             <Button variant="outline" size="sm" asChild>
-              <a href="/daria-shiryaeva-cv.pdf" download>
+              <a href="/assets/projects/daria-shiryaeva-cv.pdf" download>
                 <FileDown className="mr-2 h-4 w-4" />
                 CV
               </a>
@@ -80,7 +80,7 @@ const Header = () => {
                 </Link>
               ))}
               <Button variant="outline" size="sm" asChild className="w-full">
-                <a href="/daria-shiryaeva-cv.pdf" download>
+                <a href="/assets/projects/daria-shiryaeva-cv.pdf" download>
                   <FileDown className="mr-2 h-4 w-4" />
                   Download CV
                 </a>
