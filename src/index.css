@@ -112,6 +112,11 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  .hero-height {
+    height: calc(100vh - 4rem);
+    height: calc(100svh - 4rem);
+  }
+
   .fade-in {
     animation: fade-in 0.6s ease-out;
   }

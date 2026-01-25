@@ -19,7 +19,7 @@ const Index = () => {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="min-h-[calc(100svh-4rem)] flex items-center">
+        <section className="hero-height flex items-center">
           <div className="container-custom">
             <div className="max-w-4xl fade-in">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
