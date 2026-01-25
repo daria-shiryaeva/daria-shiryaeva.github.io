@@ -14,6 +14,7 @@ export interface Project {
   tags: string[];
   featured?: boolean;
   impact?: string;
+  pdfs?: { src: string; label: string }[];
 }
 
 export const projects: Project[] = [
@@ -162,6 +163,11 @@ export const projects: Project[] = [
     tags: [],
     featured: true,
     impact: 'Community hub with flexible spaces and public realm',
+    pdfs: [
+      { src: '/assets/projects/Aberdeen_Section-01_Research_and_Analysis.pdf', label: 'Research & Analysis' },
+      { src: '/assets/projects/Aberdeen_Section-02_Process.pdf', label: 'Process' },
+      { src: '/assets/projects/Aberdeen_Section-03_Proposal.pdf', label: 'Proposal' },
+    ],
   },
     // {
   //   id: '1',

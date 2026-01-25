@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, MapPin, Calendar, User } from 'lucide-react';
+import { ArrowLeft, MapPin, Calendar, User, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Header from '@/components/Header';
@@ -117,6 +117,28 @@ const ProjectDetail = () => {
                         loading="lazy"
                       />
                     </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* PDFs */}
+            {project.pdfs && project.pdfs.length > 0 && (
+              <div className="text-center pt-8">
+                <h3 className="text-xl font-semibold mb-2">Want to see more?</h3>
+                <p className="text-muted-foreground mb-6">View the full project</p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  {project.pdfs.map((pdf, index) => (
+                    <a
+                      key={index}
+                      href={pdf.src}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+                    >
+                      <FileText className="h-4 w-4" />
+                      {pdf.label}
+                    </a>
                   ))}
                 </div>
               </div>
