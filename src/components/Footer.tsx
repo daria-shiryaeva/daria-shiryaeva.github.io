@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="border-t border-border bg-background">
       <div className="container-custom py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Info */}
           <div>
             <h3 className="text-sm font-semibold mb-4">Contact</h3>
@@ -37,7 +37,7 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-semibold mb-4">Quick Links</h3>
             <div className="flex flex-col gap-3 text-sm text-muted-foreground">
-              <Link to="/projects" className="hover:text-accent transition-colors">
+              <Link to="/" className="hover:text-accent transition-colors">
                 Projects
               </Link>
               <Link to="/experience" className="hover:text-accent transition-colors">
@@ -52,15 +52,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Legal */}
-          <div>
-            <h3 className="text-sm font-semibold mb-4">Legal</h3>
-            <div className="flex flex-col gap-3 text-sm text-muted-foreground">
-              <Link to="/legal" className="hover:text-accent transition-colors">
-                Privacy & Terms
-              </Link>
-            </div>
-          </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-border">

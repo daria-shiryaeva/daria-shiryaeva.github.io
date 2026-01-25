@@ -6,7 +6,6 @@ export interface Project {
   location: string;
   type: 'Infrastructure' | 'Community' | 'Education' | 'Culture' | 'Masterplanning' | 'Individual Project' | 'TED Project';
   role: string;
-  status: string;
   overview: string;
   contributions: string;
   heroImage: string;
@@ -26,7 +25,6 @@ export const projects: Project[] = [
     location: 'Swindon, UK',
     type: 'Community',
     role: 'Group Project',
-    status: 'Individual Project',
     overview: 'A community-centred sports and wellbeing hub with pools, flexible sports hall and market space, studio and therapy rooms, and generous glazing that connects activity to the street.',
     contributions: 'I designed the full scheme from concept to detail, integrating a complex mixed-use programme that includes adult and children pool depths, a sports hall that converts to market space, café, community rooms, yoga and pilates studios, and therapy spaces. I developed a clear hierarchy of large volumes and cellular spaces, ensuring intuitive circulation and strong connections to the street.',
     heroImage: '/assets/projects/Healthier Futures_External_3-min.png',
@@ -60,7 +58,6 @@ export const projects: Project[] = [
     location: 'Swindon, UK',
     type: 'Education',
     role: 'Group Project',
-    status: 'TED Project',
     overview: 'An education and innovation campus showcasing visible labs and greenhouse, winter gardens, algae facade panels, and biodiversity-rich courtyards.',
     contributions: 'I designed a higher education institute and innovation hub with visible research labs and greenhouse, winter gardens for year-round learning, and public realm upgrades. The scheme includes algae facade panels as both a renewable energy source and a learning device, alongside thermal labyrinth, geothermal systems, and solar arrays.',
     heroImage: '/assets/projects/Ted_Curtyard_Vis-min.png',
@@ -92,7 +89,6 @@ export const projects: Project[] = [
     location: 'Frome, UK',
     type: 'Community',
     role: 'Group Project',
-    status: 'TED Project',
     overview: 'An education and innovation campus showcasing visible labs and greenhouse, winter gardens, algae facade panels, and biodiversity-rich courtyards.',
     contributions: 'I designed a higher education institute and innovation hub with visible research labs and greenhouse, winter gardens for year-round learning, and public realm upgrades. The scheme includes algae facade panels as both a renewable energy source and a learning device, alongside thermal labyrinth, geothermal systems, and solar arrays.',
     heroImage: '/assets/projects/Sketchbook_plans-min.png',
@@ -122,7 +118,6 @@ export const projects: Project[] = [
     location: 'Frome, UK',
     type: 'Masterplanning',
     role: 'Group Project',
-    status: 'Student Project',
     overview: 'An education and innovation campus showcasing visible labs and greenhouse, winter gardens, algae facade panels, and biodiversity-rich courtyards.',
     contributions: 'I designed a higher education institute and innovation hub with visible research labs and greenhouse, winter gardens for year-round learning, and public realm upgrades. The scheme includes algae facade panels as both a renewable energy source and a learning device, alongside thermal labyrinth, geothermal systems, and solar arrays.',
     heroImage: '/assets/projects/Masterplanning_thumnail.jpg',
@@ -148,7 +143,6 @@ export const projects: Project[] = [
     location: 'Abderdeen, UK',
     type: 'Masterplanning',
     role: 'Group Project',
-    status: 'Student Project',
     overview: 'With North Sea oil in decline, how can Aberdeen reinvent its economy over the next 50 years, and how can the city’s built fabric support people through that transition?',
     contributions: 'I performed the site analysis and masterplan design, creating a detailed phasing plan for the city\'s future without oil.',
     heroImage: '/assets/projects/aberdeen_After_Vis.png',

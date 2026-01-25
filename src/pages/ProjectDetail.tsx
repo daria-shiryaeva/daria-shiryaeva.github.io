@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, MapPin, Calendar, User, FileText } from 'lucide-react';
+import { ArrowLeft, MapPin, Calendar, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Header from '@/components/Header';
@@ -71,13 +71,6 @@ const ProjectDetail = () => {
                 <div>
                   <span className="font-semibold">Role</span>
                   <span className="text-muted-foreground ml-2">{project.role}</span>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <FileText className="h-5 w-5 text-muted-foreground shrink-0" />
-                <div>
-                  <span className="font-semibold">Status</span>
-                  <span className="text-muted-foreground ml-2">{project.status}</span>
                 </div>
               </div>
             </div>
