@@ -10,7 +10,7 @@ import { projects } from '@/data/projects';
 const Index = () => {
   const [showAll, setShowAll] = useState(false);
 
-  const filteredProjects = projects; // No filtering needed.
+  const filteredProjects = [...projects].sort((a, b) => Number(b.id) - Number(a.id));
   const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 6);
 
   return (
@@ -19,8 +19,9 @@ const Index = () => {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="container-custom py-24 md:py-32">
-          <div className="max-w-4xl fade-in">
+        <section className="min-h-[calc(100svh-4rem)] flex items-center">
+          <div className="container-custom">
+            <div className="max-w-4xl fade-in">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
               Architecture, infrastructure, and regeneration.
             </h1>
@@ -34,6 +35,7 @@ const Index = () => {
               <Button size="lg" variant="outline" asChild>
                 <Link to="/contact">Get in Touch</Link>
               </Button>
+            </div>
             </div>
           </div>
         </section>
