@@ -24,7 +24,7 @@ const Index = () => {
           <div className="container-custom">
             <div className="max-w-4xl fade-in">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
-              Architecture, infrastructure, and regeneration.
+              Architecture rooted in people, place, and environmental responsibility.
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
               {bioIntro}
