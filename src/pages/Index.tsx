@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ProjectCard from '@/components/ProjectCard';
+import { bioIntro } from '@/data/bio';
 import { projects } from '@/data/projects';
 
 const Index = () => {
@@ -26,7 +27,7 @@ const Index = () => {
               Architecture, infrastructure, and regeneration.
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-              I'm Daria, an architecture Master's student at the University of Bath. I am consistently engaged in various projects and try to make an effort to keep them update to date here.
+              {bioIntro}
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" variant="outline" asChild>

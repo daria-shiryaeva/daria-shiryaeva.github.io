@@ -55,8 +55,8 @@ const Legal = () => {
                 <h3 className="text-xl font-semibold mt-6 mb-3">Contact</h3>
                 <p className="text-muted-foreground">
                   If you have any questions about these terms or your privacy, please contact me at{' '}
-                  <a href="mailto:odrshrv@gmail.com" className="text-accent hover:underline">
-                    odrshrv@gmail.com
+                  <a href="mailto:d.shiryaeva@gmail.com" className="text-accent hover:underline">
+                    d.shiryaeva@gmail.com
                   </a>
                   .
                 </p>
