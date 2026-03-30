@@ -123,7 +123,6 @@ export const projects: Project[] = [
       { src: '/assets/projects/Masterplanning_Images3.png', alt: 'Masterplanning concept with site layout and connections' },
       { src: '/assets/projects/Masterplanning_Images4.png', alt: 'Masterplanning diagram illustrating spatial organization' },
       { src: '/assets/projects/Masterplanning_Images5.png', alt: 'Masterplanning view showing public spaces and circulation' },
-      { src: '/assets/projects/Masterplanning_Images6.png', alt: 'Masterplanning perspective of development proposal' },
       { src: '/assets/projects/Masterplanning_Model.png', alt: 'Physical model of masterplanning scheme' },
 
     ],
