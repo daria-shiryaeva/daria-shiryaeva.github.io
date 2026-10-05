@@ -113,7 +113,8 @@ const ProjectDetail = () => {
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-auto"
+                        className="w-full h-auto object-cover rounded-lg"
+                        style={{ aspectRatio: image.aspectRatio, objectPosition: image.objectPosition }}
                         loading="lazy"
                       />
                     </div>

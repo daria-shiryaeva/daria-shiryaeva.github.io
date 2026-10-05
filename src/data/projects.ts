@@ -10,7 +10,7 @@ export interface Project {
   contributions: string;
   heroImage: string;
   heroAlt: string;
-  gallery: { src: string; alt: string }[];
+  gallery: { src: string; alt: string; aspectRatio?: string; objectPosition?: string }[];
   tags: string[];
   featured?: boolean;
   impact?: string;
@@ -163,37 +163,34 @@ export const projects: Project[] = [
       { src: '/assets/projects/Aberdeen_Section-03_Proposal.pdf', label: 'Proposal' },
     ],
   },
-  // {
-  //   id: '6',
-  //   title: 'Abderdeen | Year 6 Individual Project',
-  //   slug: 'abderdeen-individual-project',
-  //   year: '2025-2026',
-  //   location: 'Abderdeen, UK',
-  //   type: 'Masterplanning',
-  //   role: 'Individual Project',
-  //   overview: 'With North Sea oil in decline, how can Aberdeen reinvent its economy over the next 50 years, and how can the city’s built fabric support people through that transition?',
-  //   contributions: 'I performed the site analysis and masterplan design, creating a detailed phasing plan for the city\'s future without oil.',
-  //   heroImage: '/assets/projects/Aberdeen_Brief_Thumbnail.png',
-  //   heroAlt: 'Aberdeen Brief',
-  //   gallery: [
-  //     { src: '/assets/projects/Aberdeen_Brief 1.png', alt: 'Aberdeen Brief image 1' },
-  //     { src: '/assets/projects/Aberdeen_Brief 2.png', alt: 'Aberdeen Brief image 2' },
-  //     { src: '/assets/projects/Aberdeen_Brief 3.png', alt: 'Aberdeen Brief image 3' },
-  //     { src: '/assets/projects/Aberdeen_Brief 4.png', alt: 'Aberdeen Brief image 4' },
-  //     { src: '/assets/projects/Aberdeen_Brief 5.png', alt: 'Aberdeen Brief image 5' },
-  //     { src: '/assets/projects/Aberdeen_Brief 6.png', alt: 'Aberdeen Brief image 6' },
-  //     { src: '/assets/projects/Aberdeen_Brief 7.png', alt: 'Aberdeen Brief image 7' },
-  //     { src: '/assets/projects/Aberdeen_Brief 8.png', alt: 'Aberdeen Brief image 8' },
-  //     { src: '/assets/projects/Aberdeen_Brief 9.png', alt: 'Aberdeen Brief image 9' },
-
-  //   ],
-  //   tags: [],
-  //   featured: true,
-  //   impact: 'Community hub with flexible spaces and public realm',
-  //   pdfs: [
-  //     { src: '/assets/projects/ABERDEEN_SHIRYAEVA_Daria_Individual-Brief.pdf', label: 'Brief' },
-  //   ],
-  // },
+  {
+    id: '6',
+    title: 'Aberdeen | Year 6 Individual Project | Frances Walker Gallery',
+    slug: 'aberdeen-individual-project',
+    year: '2025-2026',
+    location: 'Aberdeen, UK',
+    type: 'Culture',
+    role: 'Individual Project',
+    overview: 'An individual sixth-year architectural project for a new public gallery and archive on Aberdeen’s waterfront, developed within the wider Aberdeen, City at the Crossroads group masterplan. Set within a former freight depot, the proposal gives new life to the industrial edge of the harbour, creating a cultural destination where art, landscape, and the memory of the site come together.',
+    contributions: 'I developed the project independently from concept through to detailed design, shaping its spatial sequence, structure, façade, environmental strategy, access, fire strategy, and building services. The architecture draws on the material character of Aberdeen’s harbour, using concrete, reclaimed elements, and existing industrial structures to create a building that feels rooted in its setting. At its centre, a publicly visible archive becomes both a working collection and a landmark, while galleries, studios, workshops, and landscaped routes extend the experience beyond the building and towards the waterfront.',
+    heroImage: '/assets/projects/Visual_External (2).png',
+    heroAlt: 'External render of Frances Walker Gallery on Aberdeen’s waterfront',
+    gallery: [
+      { src: '/assets/projects/Frances_Walker_Gallery_Floor_Plans_GF (2).png', alt: 'Frances Walker Gallery ground floor plan' },
+      { src: '/assets/projects/Frances_Walker_Gallery_Floor_Plans_1F (2).png', alt: 'Frances Walker Gallery first floor plan' },
+      { src: '/assets/projects/Frances_Walker_Gallery_Floor_Plans_2F (2).png', alt: 'Frances Walker Gallery second floor plan' },
+      { src: '/assets/projects/Frances_Walker_Gallery_Floor_Plans_3F (2).png', alt: 'Frances Walker Gallery third floor plan' },
+      { src: '/assets/projects/Visualisation_Workshop (2).png', alt: 'Workshop interior visualisation' },
+      { src: '/assets/projects/Visualisation_Archive (2).jpg', alt: 'Archive visualisation showing the working collection' },
+      { src: '/assets/projects/Visualisation_Seminar Room (2).png', alt: 'Seminar room interior visualisation', aspectRatio: '1 / 1', objectPosition: 'bottom' },
+      { src: '/assets/projects/Visualisation_Gallery_1 (2).png', alt: 'Gallery interior visualisation' },
+      { src: '/assets/projects/Galleries_Axo (2).png', alt: 'Axonometric showing the gallery spaces' },
+      { src: '/assets/projects/Visualisation_Axonometric (2).png', alt: 'External axonometric of the gallery and its waterfront setting' },
+    ],
+    tags: [],
+    featured: true,
+    impact: 'Public gallery and archive on Aberdeen’s waterfront',
+  },
     // {
   //   id: '1',
   //   title: 'Route-Wide Design Principles',
