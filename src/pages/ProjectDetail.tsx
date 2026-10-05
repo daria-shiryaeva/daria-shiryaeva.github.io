@@ -109,7 +109,7 @@ const ProjectDetail = () => {
                 <h2 className="text-2xl font-bold mb-6">Gallery</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {project.gallery.map((image, index) => (
-                    <div key={index} className="overflow-hidden rounded-lg">
+                    <div key={index} className={`overflow-hidden rounded-lg ${image.fullWidth ? 'md:col-span-2' : ''}`}>
                       <img
                         src={image.src}
                         alt={image.alt}

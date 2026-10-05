@@ -10,7 +10,7 @@ export interface Project {
   contributions: string;
   heroImage: string;
   heroAlt: string;
-  gallery: { src: string; alt: string; aspectRatio?: string; objectPosition?: string }[];
+  gallery: { src: string; alt: string; aspectRatio?: string; objectPosition?: string; fullWidth?: boolean }[];
   tags: string[];
   featured?: boolean;
   impact?: string;
@@ -176,6 +176,7 @@ export const projects: Project[] = [
     heroImage: '/assets/projects/Visual_External (2).png',
     heroAlt: 'External render of Frances Walker Gallery on Aberdeen’s waterfront',
     gallery: [
+      { src: '/assets/projects/Section_WE (2).png', alt: 'West–east section through Frances Walker Gallery', fullWidth: true },
       { src: '/assets/projects/Frances_Walker_Gallery_Floor_Plans_GF (2).png', alt: 'Frances Walker Gallery ground floor plan' },
       { src: '/assets/projects/Frances_Walker_Gallery_Floor_Plans_1F (2).png', alt: 'Frances Walker Gallery first floor plan' },
       { src: '/assets/projects/Frances_Walker_Gallery_Floor_Plans_2F (2).png', alt: 'Frances Walker Gallery second floor plan' },
